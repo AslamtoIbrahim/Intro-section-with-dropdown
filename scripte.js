@@ -1,13 +1,22 @@
-const listTitle = document.querySelectorAll(".list-title");
+const listTitle = document.querySelectorAll(".list");
 
-listTitle.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        item.querySelector('img').src = '/images/icon-arrow-up.svg';
-    });
-    item.addEventListener('mouseout', () => {
-        item.querySelector('img').src = '/images/icon-arrow-down.svg';
-    });
+listTitle.forEach((item, index) => {
+    // item.addEventListener('mouseover', () => {
+    //     item.querySelector('img').src = '/images/icon-arrow-up.svg';
+    // });
+    // item.addEventListener('mouseout', () => {
+    //     item.querySelector('img').src = '/images/icon-arrow-down.svg';
+    // });
 
     
-    // item.querySelector('img').src = item.querySelector('img').src === '/images/icon-arrow-up.svg'? '/images/icon-arrow-down.svg' : '/images/icon-arrow-up.svg';
+    item.addEventListener('click', function(){
+        item.querySelector('.drop-down-list').classList.toggle('showList');
+        const imgLs = item.querySelector('img');
+        
+        if(imgLs.src.includes('/images/icon-arrow-up.svg')){
+            imgLs.src = '/images/icon-arrow-down.svg';
+        } else {
+            imgLs.src = '/images/icon-arrow-up.svg';
+        }
+    });
 });
