@@ -227,6 +227,10 @@ main {
     display: none;
 }
 
+.black-parent{
+    display: none;
+}
+
 /* responsive design */
 
 @media screen and (max-width: 640px) {
@@ -335,5 +339,26 @@ main {
         display: block;
         width: 100%;
         max-height: 25rem;
+    }
+
+    .up-sect {
+        align-items: center;
+        gap: 2rem;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .up-sect h1 {
+        font-size: clamp(2rem, 4vw + 1rem, 6rem);
+    }
+
+    .down-sect {
+        padding: 1rem;
+    }
+
+    .down-sect img {
+        width: 20%;
+        object-fit: cover;
     }
 }
