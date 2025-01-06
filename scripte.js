@@ -2,6 +2,7 @@ const listTitle = document.querySelectorAll(".list");
 const closeButton  = document.querySelector(".close-button");
 const navigator  = document.querySelector(".nav");
 const blackParent  = document.querySelector(".black-parent");
+const picture  = document.querySelector(".picture");
 const menu  = document.querySelector(".menu");
 
 listTitle.forEach(item => {
@@ -32,3 +33,17 @@ closeButton.addEventListener('click', function(){
 });
 
  
+changeImage();
+// change the image for different screen sizes
+function changeImage(){
+    const screenWidth = window.innerWidth;
+    const img = picture.querySelector('img');
+    if(screenWidth <= 640){
+        img.src = '/images/image-hero-mobile.png';
+    } else {
+        img.src = '/images/image-hero-desktop.png';
+    }
+}
+
+
+window.addEventListener('resize', changeImage);
