@@ -12,9 +12,9 @@ listTitle.forEach(item => {
         const imgLs = item.querySelector('img');
         
         if(imgLs.src.includes('/images/icon-arrow-up.svg')){
-            imgLs.src = '/images/icon-arrow-down.svg';
+            imgLs.src = './images/icon-arrow-down.svg';
         } else {
-            imgLs.src = '/images/icon-arrow-up.svg';
+            imgLs.src = './images/icon-arrow-up.svg';
         }
     });
 });
@@ -39,9 +39,9 @@ function changeImage(){
     const screenWidth = window.innerWidth;
     const img = picture.querySelector('img');
     if(screenWidth <= 640){
-        img.src = '/images/image-hero-mobile.png';
+        img.src = './images/image-hero-mobile.png';
     } else {
-        img.src = '/images/image-hero-desktop.png';
+        img.src = './images/image-hero-desktop.png';
     }
 }
 
